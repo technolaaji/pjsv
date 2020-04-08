@@ -18,4 +18,4 @@ commandList
     console.log('downgrade');
 });
 exports.default = commandList;
-//# sourceMappingURL=commands.js.map
+//# sourceMappingURL=index.js.map

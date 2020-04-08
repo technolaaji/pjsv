@@ -12,10 +12,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const commands_1 = __importDefault(require("./commands"));
-const constants_1 = require("../util/constants");
+const commands_1 = __importDefault(require("../commands"));
+const version_1 = require("./version");
 exports.bootstrap = () => __awaiter(void 0, void 0, void 0, function* () {
-    const version = yield constants_1.versionNumber();
+    const version = yield version_1.versionNumber();
     commands_1.default.version(version).parse(process.argv);
 });
 exports.default = exports.bootstrap;
