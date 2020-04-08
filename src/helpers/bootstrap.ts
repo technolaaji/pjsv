@@ -1,5 +1,5 @@
 import program from '../commands'
-import { versionNumber } from '../util/constants'
+import { versionNumber } from './version'
 
 export const bootstrap = async () => {
   const version = await versionNumber()
