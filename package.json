@@ -6,7 +6,8 @@
   "scripts": {
     "compile": "rimraf dist && tsc",
     "pretty": "prettier --write \"./**/*.ts\"",
-    "dev": "nodemon",
+    "dev:upgrade": "nodemon upgrade",
+    "dev:downgrade": "nodemon downgrade",
     "doc": "rimraf docs && esdoc"
   },
   "bin": "./bin/pjsv.js",
