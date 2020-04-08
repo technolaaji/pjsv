@@ -1,2 +1,3 @@
-console.log('hello world')
-console.log('test')
+import bootstrap from './helpers/bootstrap'
+
+bootstrap()
