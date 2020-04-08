@@ -565,7 +565,7 @@
   },
   {
     "kind": "index",
-    "content": "",
+    "content": "#pjsv\n",
     "longname": "/Users/technolaaji/Documents/projects/pjsv/README.md",
     "name": "./README.md",
     "static": true,
@@ -573,7 +573,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"pjsv\",\n  \"version\": \"1.0.0\",\n  \"description\": \"organize your project's version in a semantic way\",\n  \"main\": \"dist/index.js\",\n  \"scripts\": {\n    \"compile\": \"tsc\",\n    \"pretty\": \"prettier --write \\\"./**/*.ts\\\"\",\n    \"dev\": \"nodemon\",\n    \"doc\": \"esdoc\"\n  },\n  \"bin\": \"./bin/pjsv.js\",\n  \"author\": \"Mohamad Kalaaji - mohamad@technolaaji.com\",\n  \"license\": \"MIT\",\n  \"dependencies\": {\n    \"colors\": \"^1.4.0\",\n    \"commander\": \"^5.0.0\",\n    \"inquirer\": \"^7.1.0\",\n    \"jsonfile\": \"^6.0.1\"\n  },\n  \"devDependencies\": {\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"nodemon\": \"^2.0.2\",\n    \"prettier\": \"^2.0.4\",\n    \"ts-node\": \"^8.8.2\",\n    \"tslint\": \"^6.1.1\",\n    \"typescript\": \"^3.8.3\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"pjsv\",\n  \"version\": \"1.0.0\",\n  \"description\": \"organize your project's version in a semantic way\",\n  \"main\": \"dist/index.js\",\n  \"scripts\": {\n    \"compile\": \"rimraf dist && tsc\",\n    \"pretty\": \"prettier --write \\\"./**/*.ts\\\"\",\n    \"dev\": \"nodemon\",\n    \"doc\": \"rimraf docs && esdoc\"\n  },\n  \"bin\": \"./bin/pjsv.js\",\n  \"author\": \"Mohamad Kalaaji - mohamad@technolaaji.com\",\n  \"license\": \"MIT\",\n  \"dependencies\": {\n    \"colors\": \"^1.4.0\",\n    \"commander\": \"^5.0.0\",\n    \"inquirer\": \"^7.1.0\",\n    \"jsonfile\": \"^6.0.1\"\n  },\n  \"devDependencies\": {\n    \"@types/jsonfile\": \"^5.0.0\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"nodemon\": \"^2.0.2\",\n    \"prettier\": \"^2.0.4\",\n    \"rimraf\": \"^3.0.2\",\n    \"ts-node\": \"^8.8.2\",\n    \"tslint\": \"^6.1.1\",\n    \"typescript\": \"^3.8.3\"\n  }\n}\n",
     "longname": "/Users/technolaaji/Documents/projects/pjsv/package.json",
     "name": "package.json",
     "static": true,

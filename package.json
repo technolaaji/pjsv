@@ -7,7 +7,7 @@
     "compile": "rimraf dist && tsc",
     "pretty": "prettier --write \"./**/*.ts\"",
     "dev": "nodemon",
-    "doc": "esdoc"
+    "doc": "rimraf docs && esdoc"
   },
   "bin": "./bin/pjsv.js",
   "author": "Mohamad Kalaaji - mohamad@technolaaji.com",
