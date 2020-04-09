@@ -1,6 +1,10 @@
 import jsonfile from 'jsonfile'
-import { directoryExecutedPath } from '../util/constants'
-import colors from '../util/colors'
+import {
+  directoryExecutedPath,
+  noPackageJsonWarning,
+  retrieveVersionWarning,
+  cannotWriteToPackageJsonWarning,
+} from '../util/constants'
 
 export const readPackage = async () => {
   try {
@@ -9,9 +13,7 @@ export const readPackage = async () => {
     )
     return data
   } catch (e) {
-    console.log(
-      colors('red', 'There is no package json in this current directory'),
-    )
+    noPackageJsonWarning()
   }
 }
 
@@ -20,15 +22,7 @@ export const retrieveVersion = async () => {
     const data = await readPackage()
     return String(data.version)
   } catch (e) {
-    console.log(
-      colors('red', 'Please use the command where a package json is location'),
-    )
-    console.log(
-      colors(
-        'yellow',
-        'if you see that this issue progresses even if you execute it in the right place, kindly send a pull request on github',
-      ),
-    )
+    retrieveVersionWarning()
   }
 }
 
@@ -38,11 +32,6 @@ export const writePackage = async (payload) => {
       spaces: 2,
     })
   } catch (e) {
-    console.log(
-      colors(
-        'red',
-        'you cannot write in a place where package json does not exist',
-      ),
-    )
+    cannotWriteToPackageJsonWarning()
   }
 }
