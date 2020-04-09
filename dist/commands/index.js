@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const commander_1 = __importDefault(require("../helpers/commander"));
 const upgrade_1 = __importDefault(require("./upgrade"));
+const downgrade_1 = __importDefault(require("./downgrade"));
 const commandList = commander_1.default;
 commandList
     .command('upgrade')
@@ -16,7 +17,7 @@ commandList
     .command('downgrade')
     .description("Downgrades your package json's version")
     .action(() => {
-    console.log('downgrade');
+    downgrade_1.default();
 });
 exports.default = commandList;
 //# sourceMappingURL=index.js.map

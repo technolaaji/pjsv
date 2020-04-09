@@ -1,5 +1,6 @@
 import program from '../helpers/commander'
 import upgrade from './upgrade'
+import downgrade from './downgrade'
 const commandList = program
 
 commandList
@@ -13,7 +14,7 @@ commandList
   .command('downgrade')
   .description("Downgrades your package json's version")
   .action(() => {
-    console.log('downgrade')
+    downgrade()
   })
 
 export default commandList
