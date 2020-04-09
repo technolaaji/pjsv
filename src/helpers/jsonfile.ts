@@ -1,6 +1,6 @@
 import jsonfile from 'jsonfile'
-import { directoryExecutedPath } from './constants'
-import colors from './colors'
+import { directoryExecutedPath } from '../util/constants'
+import colors from '../util/colors'
 
 export const readPackage = async () => {
   try {

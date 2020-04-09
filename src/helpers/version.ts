@@ -1,4 +1,4 @@
-import { retrieveVersion } from '../util/jsonfile'
+import { retrieveVersion } from './jsonfile'
 
 export const versionNumber = () => {
   return retrieveVersion()

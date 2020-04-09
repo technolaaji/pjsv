@@ -4,7 +4,7 @@ import asciiart from '../util/ascii-art'
 
 export const bootstrap = async () => {
   const version = await versionNumber()
-  await asciiart()
+  asciiart()
   return program.version(version).parse(process.argv)
 }
 
