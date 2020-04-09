@@ -8,5 +8,7 @@ export default (color: string, text: string) => {
       return chalk.green(text)
     case 'red':
       return chalk.red(text)
+    case 'redbg':
+      return chalk.bgRed(text)
   }
 }
