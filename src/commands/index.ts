@@ -1,12 +1,12 @@
 import program from '../util/commander'
-
+import upgrade from './upgrade'
 const commandList = program
 
 commandList
   .command('upgrade')
   .description("Uprades your package json's version")
   .action(() => {
-    console.log('upgrade')
+    upgrade()
   })
 
 commandList
