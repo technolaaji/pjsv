@@ -1,5 +1,10 @@
 import updater from '../../helpers/updater'
-
-export default (): void => {
+/**
+ * Minor Update - updates the minor version of your package.json
+ * @returns void
+ */
+const minor = (): void => {
   updater('minor')
 }
+
+export default minor
