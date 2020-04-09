@@ -44,7 +44,7 @@ export const thankYouForNotDowngrading = (): void => {
   )
 }
 /**
- * Downgrade Warnings - returns a series of warnings to inform of the user before downgrading
+ * Downgrade Warnings - returns a series of warnings to inform to the user before downgrading
  * @returns void
  */
 export const downgradeWarnings = (): void => {
