@@ -6,9 +6,19 @@ export default async () => {
     {
       type: 'list',
       name: 'upgrade',
-      message: 'What type of update you are pushing?',
+      message: 'What type of update you are pushing ?',
       choices: [choices.Major, choices.Minor, choices.Patch],
     },
   ])
-  console.log(chosenOption)
+  switch (chosenOption.upgrade) {
+    case choices.Major:
+      console.log('major')
+      break
+    case choices.Minor:
+      console.log('minor')
+      break
+    case choices.Patch:
+      console.log('patch')
+      break
+  }
 }
