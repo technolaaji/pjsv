@@ -1,5 +1,8 @@
 import inquirer from 'inquirer'
 import { choices } from '../../util/constants'
+import upgradeMajor from './upgrade-major'
+import upgradeMinor from './update-minor'
+import upgradePatch from './update-patch'
 
 export default async () => {
   const chosenOption = await inquirer.prompt([
@@ -12,13 +15,13 @@ export default async () => {
   ])
   switch (chosenOption.upgrade) {
     case choices.Major:
-      console.log('major')
+      upgradeMajor()
       break
     case choices.Minor:
-      console.log('minor')
+      upgradeMinor()
       break
     case choices.Patch:
-      console.log('patch')
+      upgradePatch()
       break
   }
 }

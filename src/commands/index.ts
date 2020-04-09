@@ -1,4 +1,4 @@
-import program from '../util/commander'
+import program from '../helpers/commander'
 import upgrade from './upgrade'
 const commandList = program
 

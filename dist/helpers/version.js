@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const jsonfile_1 = require("../util/jsonfile");
+const jsonfile_1 = require("./jsonfile");
 exports.versionNumber = () => {
     return jsonfile_1.retrieveVersion();
 };

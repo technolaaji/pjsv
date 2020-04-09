@@ -20,6 +20,29 @@ export const retrieveVersion = async () => {
     const data = await readPackage()
     return String(data.version)
   } catch (e) {
-    console.log(colors('red', ''))
+    console.log(
+      colors('red', 'Please use the command where a package json is location'),
+    )
+    console.log(
+      colors(
+        'yellow',
+        'if you see that this issue progresses even if you execute it in the right place, kindly send a pull request on github',
+      ),
+    )
+  }
+}
+
+export const writePackage = async (payload) => {
+  try {
+    await jsonfile.writeFile(`${directoryExecutedPath}/package.json`, payload, {
+      spaces: 2,
+    })
+  } catch (e) {
+    console.log(
+      colors(
+        'red',
+        'you cannot write in a place where package json does not exist',
+      ),
+    )
   }
 }

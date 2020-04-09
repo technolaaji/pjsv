@@ -14,9 +14,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const commands_1 = __importDefault(require("../commands"));
 const version_1 = require("./version");
+const ascii_art_1 = __importDefault(require("../util/ascii-art"));
 exports.bootstrap = () => __awaiter(void 0, void 0, void 0, function* () {
     const version = yield version_1.versionNumber();
-    commands_1.default.version(version).parse(process.argv);
+    ascii_art_1.default();
+    return commands_1.default.version(version).parse(process.argv);
 });
 exports.default = exports.bootstrap;
 //# sourceMappingURL=bootstrap.js.map
