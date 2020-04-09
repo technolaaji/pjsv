@@ -1,6 +1,12 @@
 import chalk from 'chalk'
 
-export default (color: string, text: string) => {
+/**
+ * Color - return a colored text to be used
+ * @param color
+ * @param text
+ * @returns string
+ */
+const colors = (color: string, text: string) => {
   switch (color) {
     case 'yellow':
       return chalk.yellow(text)
@@ -12,3 +18,5 @@ export default (color: string, text: string) => {
       return chalk.bgRed(text)
   }
 }
+
+export default colors
