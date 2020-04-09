@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "organize your project's version in a semantic way",
   "main": "dist/index.js",
+  "repository": "technolaaji/pjsv",
   "scripts": {
     "compile": "rimraf dist && tsc",
     "pretty": "prettier --write \"./**/*.ts\"",
     "dev:upgrade": "nodemon upgrade",
     "dev:downgrade": "nodemon downgrade",
-    "doc": "rimraf docs && esdoc"
+    "doc": "rimraf docs && typedoc --out docs src"
   },
   "bin": "./bin/pjsv.js",
   "author": "Mohamad Kalaaji - mohamad@technolaaji.com",
@@ -25,13 +26,12 @@
     "@types/figlet": "^1.2.0",
     "@types/inquirer": "^6.5.0",
     "@types/jsonfile": "^5.0.0",
-    "esdoc": "^1.1.0",
-    "esdoc-standard-plugin": "^1.0.0",
     "nodemon": "^2.0.2",
     "prettier": "^2.0.4",
     "rimraf": "^3.0.2",
     "ts-node": "^8.8.2",
     "tslint": "^6.1.1",
+    "typedoc": "^0.17.4",
     "typescript": "^3.8.3"
   }
 }
