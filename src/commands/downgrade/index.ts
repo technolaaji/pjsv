@@ -6,9 +6,18 @@ import {
   thankYouForNotDowngrading,
 } from '../../util/constants'
 
-export default async (): Promise<any> => {
+/**
+ * Downgrade - prompts the user if he/she is sure about the downgrade then downgrades based on the stage the user have chosen
+ * @returns Promise<any>
+ */
+const downgrade = async (): Promise<any> => {
+  /**
+   * A list of warnings informing the user before updating, we are not responsible for any issues that gets generated afterwards. You have been warned
+   */
   downgradeWarnings()
-
+  /**
+   * Prompts the user with a simple yes/no question to make sure if he/she wants to upgrade
+   */
   const confirmation = await inquirer.prompt([
     {
       type: 'list',
@@ -20,9 +29,18 @@ export default async (): Promise<any> => {
       choices: ['yes', 'no'],
     },
   ])
+
   if (confirmation.agreement === 'yes') {
+    /**
+     * Executes the downgrade function if the user accepted to downgrade
+     */
     downgradeAccepted()
   } else {
+    /**
+     * Executes a function that prompts the user of not downgrading if the user chose no as an answer
+     */
     thankYouForNotDowngrading()
   }
 }
+
+export default downgrade

@@ -1,5 +1,11 @@
 import downgrader from '../../helpers/downgrader'
 
-export default (): void => {
+/**
+ * Downgrade Major - downgrades the major version
+ * @returns void
+ */
+const downgradeMajor = (): void => {
   downgrader('major')
 }
+
+export default downgradeMajor
