@@ -1,6 +1,6 @@
 import colors from './colors'
 
-export const directoryExecutedPath = process.cwd()
+export const directoryExecutedPath: string = process.cwd()
 
 export const choices = {
   Major: 'Major Release - Changes that break backward compatibility',
@@ -14,11 +14,11 @@ export const downgradeChoices = {
   Patch: 'Patch Downgrade - Decreases the patch version by one',
 }
 
-export const zeroOrBelowWarning = () => {
+export const zeroOrBelowWarning = (): void => {
   console.log(colors('red', 'You cannot decrease your version below zero'))
 }
 
-export const thankYouForNotDowngrading = () => {
+export const thankYouForNotDowngrading = (): void => {
   console.log(
     colors(
       'green',
@@ -27,7 +27,7 @@ export const thankYouForNotDowngrading = () => {
   )
 }
 
-export const downgradeWarnings = () => {
+export const downgradeWarnings = (): void => {
   console.log(
     colors(
       'yellow',
@@ -54,13 +54,13 @@ export const downgradeWarnings = () => {
   )
 }
 
-export const noPackageJsonWarning = () => {
+export const noPackageJsonWarning = (): void => {
   console.log(
     colors('red', 'There is no package json in this current directory'),
   )
 }
 
-export const retrieveVersionWarning = () => {
+export const retrieveVersionWarning = (): void => {
   console.log(
     colors('red', 'Please use the command where a package json is location'),
   )
@@ -72,7 +72,7 @@ export const retrieveVersionWarning = () => {
   )
 }
 
-export const cannotWriteToPackageJsonWarning = () => {
+export const cannotWriteToPackageJsonWarning = (): void => {
   console.log(
     colors(
       'red',

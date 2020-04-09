@@ -6,7 +6,7 @@ import {
   cannotWriteToPackageJsonWarning,
 } from '../util/constants'
 
-export const readPackage = async () => {
+export const readPackage = async (): Promise<any> => {
   try {
     const data = await jsonfile.readFile(
       `${directoryExecutedPath}/package.json`,
@@ -17,7 +17,7 @@ export const readPackage = async () => {
   }
 }
 
-export const retrieveVersion = async () => {
+export const retrieveVersion = async (): Promise<string> => {
   try {
     const data = await readPackage()
     return String(data.version)
@@ -26,7 +26,7 @@ export const retrieveVersion = async () => {
   }
 }
 
-export const writePackage = async (payload) => {
+export const writePackage = async (payload: object): Promise<void> => {
   try {
     await jsonfile.writeFile(`${directoryExecutedPath}/package.json`, payload, {
       spaces: 2,

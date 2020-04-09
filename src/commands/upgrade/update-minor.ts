@@ -1,5 +1,5 @@
 import updater from '../../helpers/updater'
 
-export default () => {
+export default (): void => {
   updater('minor')
 }

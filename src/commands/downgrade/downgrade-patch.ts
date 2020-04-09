@@ -1,5 +1,5 @@
 import downgrader from '../../helpers/downgrader'
 
-export default () => {
+export default (): void => {
   downgrader('patch')
 }

@@ -6,7 +6,7 @@ import {
   thankYouForNotDowngrading,
 } from '../../util/constants'
 
-export default async () => {
+export default async (): Promise<any> => {
   downgradeWarnings()
 
   const confirmation = await inquirer.prompt([

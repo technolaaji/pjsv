@@ -1,7 +1,7 @@
 import checkIfZeroOrBelow from './checkIfZeroOrBelow'
 import { zeroOrBelowWarning } from '../util/constants'
 
-export default (value) => {
+export default (value: number): number => {
   if (checkIfZeroOrBelow(value)) {
     zeroOrBelowWarning()
     return 0

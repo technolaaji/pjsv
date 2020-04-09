@@ -1,6 +1,6 @@
 import ora from 'ora'
 
-export default (text) => {
+export default (text: string) => {
   const spinner = ora(text).start()
 
   setTimeout(() => {

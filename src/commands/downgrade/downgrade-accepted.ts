@@ -4,7 +4,7 @@ import downgradeMajor from './downgrade-major'
 import downgradeMinor from './downgrade-minor'
 import downgradePatch from './downgrade-patch'
 
-export default async () => {
+export default async (): Promise<any> => {
   const chosenOption = await inquirer.prompt([
     {
       type: 'list',

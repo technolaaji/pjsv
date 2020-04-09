@@ -4,7 +4,7 @@ import upgradeMajor from './upgrade-major'
 import upgradeMinor from './update-minor'
 import upgradePatch from './update-patch'
 
-export default async () => {
+export default async (): Promise<any> => {
   const chosenOption = await inquirer.prompt([
     {
       type: 'list',

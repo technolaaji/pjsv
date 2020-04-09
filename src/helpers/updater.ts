@@ -2,7 +2,7 @@ import { readPackage, writePackage } from './jsonfile'
 import { retrieveVersionObject } from './version'
 import spinner from '../util/spinner'
 
-export default async (type) => {
+export default async (type: string): Promise<any> => {
   const pkg = await readPackage()
   const version = await retrieveVersionObject()
   spinner("Updating your package json's version")
